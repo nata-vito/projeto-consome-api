@@ -14,7 +14,7 @@ function App() {
   funcaoAssync()
   return (
     <>
-      <div className='flex'>{ users.map((user) => { return ( 
+      <div className='flex'>{ users.map((user: any) => { return ( 
         <>
           <div className='box' key={user.id}>
             <img className='avatar' key={user.avatar} src= {user.avatar} />
