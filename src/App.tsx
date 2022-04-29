@@ -3,7 +3,7 @@ import './Div.css';
 import './App.css'
 
 function App() {
-  const [users, setUsers] = React.useState([])
+  const [users, setUsers] = React.useState([]) as any;
 
   const funcaoAssync = async () => { 
     const resultado = await fetch("https://reqres.in/api/users/"); 
