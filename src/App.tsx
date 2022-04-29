@@ -11,14 +11,14 @@ function App() {
     setUsers(json.data); 
   }; 
 
-  funcaoAssync()
+  React.useEffect(() => { funcaoAssync(); }, []); 
   return (
     <>
       <div className='flex'>{ users.map((user: any) => { return ( 
         <>
           <div className='box' key={user.id}>
             <img className='avatar' key={user.avatar} src= {user.avatar} />
-            <div className="box-red">
+            <div className="box-red"> 
               <p> _ </p>
               <p className='p2'> <strong>{(user.first_name.toUpperCase())}</strong> <br /> {user.email} </p>   
             </div>
